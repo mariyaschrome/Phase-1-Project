@@ -1,0 +1,13 @@
+/* Style for the topbar */
+#top-bar{
+    background-color: green;
+    color:white;
+    font-size:xx-large;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    display:flexbox
+}
+
+
