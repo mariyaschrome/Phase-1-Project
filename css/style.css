@@ -2,18 +2,23 @@
 #top-bar{
     background-color: green;
     color:white;
-    font-size:xx-large;
+    font-size: xx-large;
     padding: 10px;
     text-align: center;
     font-weight: bold;
     display:flexbox
 }
 
+#top-bar img {
+    width: 30px;
+    height: auto;
+    margin-right: 0px;  
+}
+
 .search-bar {
     display: flexbox;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
 }
 
 #search-form {
