@@ -77,20 +77,24 @@
     padding: 10px;
     width: 200px;
     text-align: center;
-}
-
-.recipe-card img {
+ }
+ 
+ 
+ .recipe-card img {
     width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
-}
-
-.recipe-card h3 {
+ }
+ 
+ 
+ .recipe-card h3 {
     margin-bottom: 5px;
-}
-
-.recipe-card p {
+ }
+ 
+ 
+ .recipe-card p {
     font-style: italic;
     margin-bottom: 5px;
-}
+ }
+ 
 
