@@ -26,7 +26,7 @@ function searchRecipes(searchTerm) {
     // Set the baseURL and API key
     const apiKey = '154e5b7cef864d61b9258a1ac725315d';
     const baseURL = 'https://api.spoonacular.com/recipes/complexSearch';
-    // Construct the full URL with the search term and API key
+    // Full URL with the search term and API key
     const url = `${baseURL}?query=${searchTerm}&apiKey=${apiKey}`
 
      // fetch data from the Spoonacular API using the url
@@ -76,6 +76,35 @@ function displayRecipes(recipes) {
         });
         // Append the recipe card div to the recipe container
         recipeContainer.appendChild(recipeCard);
+    });
+ }
+
+ // Function to display recipe information when clicked
+ function displayRecipeInformation(recipeId) {
+    // Set the baseURL and API key
+    const apiKey = '154e5b7cef864d61b9258a1ac725315d';
+    const baseURL = 'https://api.spoonacular.com/recipes/${recipeId}/information';
+    // Full URL with the API key
+    const url = `${baseURL}/${recipeId}/information?apiKey=${apiKey}`;
+
+    // Fetch data from the spoonacular API
+    fetch(url)
+    .then(response => {
+        // Check if the response status is ok
+        if (!response.ok) {
+            // Throw an error if the response is not ok
+            throw new Error('Response not ok');
+        }
+        // If the response is ok, parse the JSON data
+        return response.json();
+    })
+    .then(data => {
+        // Once fetched call the function
+        displayRecipeDetails(data);
+    })
+    // Show any errors
+    .catch(error => {
+        console.error('Error fetching data', error);
     });
  }
 
