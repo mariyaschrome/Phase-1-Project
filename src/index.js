@@ -20,3 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 });
+
+// Function to search for recipes based on the input
+function searchRecipes(searchTerm) {
+    // Set the baseURL and API key
+    const apiKey = '154e5b7cef864d61b9258a1ac725315d';
+    const baseURL = 'https://api.spoonacular.com/recipes/complexSearch';
+    // Construct the full URL with the search term and API key
+    const url = `${baseURL}?query=${searchTerm}&apiKey=${apiKey}`
+}
