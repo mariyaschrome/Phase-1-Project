@@ -28,4 +28,49 @@ function searchRecipes(searchTerm) {
     const baseURL = 'https://api.spoonacular.com/recipes/complexSearch';
     // Construct the full URL with the search term and API key
     const url = `${baseURL}?query=${searchTerm}&apiKey=${apiKey}`
+
+     // fetch data from the Spoonacular API using the url
+   fetch(url)
+   .then(response => {
+       // Check if the response status is ok
+       if (!response.ok) {
+           // If the response is not ok show an error
+           throw new Error('Response was not ok');
+       }
+       // If the resposne status is ok, parse the JSON data
+       return response.json();
+   })
+   .then(data => {
+       // Once the data is fetched, call the display recipes function
+       displayRecipes(data.results);
+   })
+   // Show any errors
+   .catch(error => {
+       console.error('Error fetching data:', error);
+   });
 }
+
+// Function to display the recipes on the webpage
+function displayRecipes(recipes) {
+    // Get the reference to the recipe-conntainer element
+    const recipeContainer = document.getElementById('recipe-container');
+    // Clear any previous results
+    recipeContainer.innerHTML = '';
+ 
+ 
+    // Iterate through each recipe
+    recipes.forEach(recipe => {
+        // Create a div element to represent each recipe card
+        const recipeCard = document.createElement('div');
+        recipeCard.classList.add('recipe-card');
+        // Populate the inner HTML of the recipe card div with recipe details
+        recipeCard.innerHTML = `
+        <img src="${recipe.image}" alt="${recipe.title}" />
+        <h3>${recipe.title}</h3>
+        <p>Ready in ${recipe.readyInMinutes} minutes</p>
+        `;
+        // Append the recipe card div to the recipe container
+        recipeContainer.appendChild(recipeCard);
+    });
+ }
+ 
