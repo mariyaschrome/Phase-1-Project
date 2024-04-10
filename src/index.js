@@ -69,8 +69,15 @@ function displayRecipes(recipes) {
         <h3>${recipe.title}</h3>
         <p>Ready in ${recipe.readyInMinutes} minutes</p>
         `;
+        // Add a click event listener to the recipe card
+        recipeCard.addEventListener('click', function() {
+            // Call function to display the recipe information when the card is clicked
+            displayRecipeInformation(recipe.id);
+        });
         // Append the recipe card div to the recipe container
         recipeContainer.appendChild(recipeCard);
     });
  }
+
+ 
  
