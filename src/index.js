@@ -67,7 +67,6 @@ function displayRecipes(recipes) {
     recipeCard.innerHTML = `
         <img src="${recipe.image}" alt="${recipe.title}" />
         <h3>${recipe.title}</h3>
-        <p>Ready in ${recipe.readyInMinutes} minutes</p>
         `;
     // Add a click event listener to the recipe card
     recipeCard.addEventListener("click", function () {
@@ -112,7 +111,6 @@ function displayRecipeInformation(recipeId, recipeTitle) {
 // Function  to display recipe information on webpage
 function displayRecipeDetails(recipe, recipeTitle) {
   // Reference to the recipe-deatils element
-  //   const recipeDetails = document.getElementById("recipe-details");
   const recipeContainer = document.getElementById("recipe-container");
   recipeContainer.innerHTML = "";
 
