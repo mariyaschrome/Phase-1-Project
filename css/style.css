@@ -104,6 +104,7 @@ body {
     border-radius: 5px;
     color: green;
     background-color: white;
+    display: flexbox;
  }
 
  .recipe-details h2 {
@@ -144,4 +145,15 @@ body {
     margin-bottom: 5px;
  }
  
+.back-button {
+    background-color: white;
+    color:green;
+    padding: 5px 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    border: 3px solid green;
+}
+
 

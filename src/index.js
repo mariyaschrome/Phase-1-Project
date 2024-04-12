@@ -119,13 +119,16 @@ function displayRecipeDetails(recipe, recipeTitle) {
 
   // Add a back button
   const backButton = document.createElement("button");
-  backButton.textContent = "Back";
+  backButton.textContent = "Back to Search Page";
   backButton.classList.add("back-button");
 
-  // Add the button to the recipe details element
-  recipeDetails.appendChild(backButton);
+  // Add event listener to the back button
+backButton.addEventListener("click", function () {
+  // Clear the recipe details container
+  recipeContainer.innerHTML = "";
+});
 
-  // Populate the inner HTML
+ // Populate the inner HTML
   recipeDetails.innerHTML = `
 <h2>${recipeTitle}</h2>
 <img src="${recipe.image}" alt="${recipe.title}" />
@@ -139,12 +142,8 @@ function displayRecipeDetails(recipe, recipeTitle) {
 <h3>Instructions</h3>
 <p>${recipe.instructions}</p>
 `;
+ // Add the button to the recipe details element
+ recipeDetails.prepend(backButton);
  
-// Add event listener to the back button
-backButton.addEventListener("click", function () {
-  // Clear the recipe details container
-  recipeContainer.innerHTML = "";
-});
-
-  recipeContainer.appendChild(recipeDetails);
+recipeContainer.appendChild(recipeDetails);
 }
