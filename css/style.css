@@ -98,5 +98,50 @@ body {
     font-style: italic;
     margin-bottom: 5px;
  }
+
+ .recipe-details {
+    border: 5px solid green;
+    border-radius: 5px;
+    color: green;
+    background-color: white;
+ }
+
+ .recipe-details h2 {
+    font-size: xx-large;
+    margin-bottom: 20px;
+    text-align: center;
+ }
+
+ .recipe-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    justify-content: center;
+    border: 5px solid green;
+    margin-left: 200px;
+ }
+
+ .recipe-details p {
+    font-size: large;
+    margin-top: 20px;
+    margin-left: 20px;
+ }
+
+ .recipe-details h3 {
+    font-size: larger;
+    margin-top: 20px;
+    margin-left: 20px;
+ }
+
+ .recipe-details ul {
+    list-style-type: disc;
+    font-size: large;
+ }
+
+ .recipe-details li {
+    font-size: large;
+    margin-bottom: 5px;
+ }
  
 
