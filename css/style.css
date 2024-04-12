@@ -78,7 +78,7 @@ body {
     width: 200px;
     text-align: center;
     color: green;
-    background-color: white;
+    background-color: rgba(255, 255, 255,  0.8);
  }
  
  
@@ -103,7 +103,7 @@ body {
     border: 5px solid green;
     border-radius: 5px;
     color: green;
-    background-color: white;
+    background-color: rgba(255, 255, 255,  0.8);
     display: flexbox;
  }
 
@@ -118,42 +118,51 @@ body {
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
-    justify-content: center;
+    margin: 0 auto;
+    display: block;
     border: 5px solid green;
-    margin-left: 200px;
  }
 
  .recipe-details p {
     font-size: large;
     margin-top: 20px;
     margin-left: 20px;
+    font-weight: bold;
  }
 
  .recipe-details h3 {
     font-size: larger;
     margin-top: 20px;
     margin-left: 20px;
+    font-style: italic;
+    text-decoration: underline;
  }
 
  .recipe-details ul {
     list-style-type: disc;
     font-size: large;
+    font-weight: bold;
  }
 
  .recipe-details li {
     font-size: large;
     margin-bottom: 5px;
+    font-weight: bold;
  }
  
 .back-button {
-    background-color: white;
-    color:green;
+    background-color: green;
+    color:white;
     padding: 5px 10px;
     font-weight: bold;
     border: none;
-    border-radius: 0px;
+    border-radius: 5px;
     cursor: pointer;
-    border: 3px solid green;
+    border: 3px solid white;
+}
+
+.back-button:hover {
+    border-color: greenyellow;
 }
 
 

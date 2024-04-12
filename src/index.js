@@ -1,5 +1,6 @@
 // Function to execute when the DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {
+
   // Set variables for elements in order to get references
   const form = document.getElementById("search-form");
   const input = document.getElementById("search-input");
