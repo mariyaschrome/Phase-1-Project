@@ -117,6 +117,14 @@ function displayRecipeDetails(recipe, recipeTitle) {
   const recipeDetails = document.createElement("div");
   recipeDetails.classList.add("recipe-details");
 
+  // Add a back button
+  const backButton = document.createElement("button");
+  backButton.textContent = "Back";
+  backButton.classList.add("back-button");
+
+  // Add the button to the recipe details element
+  recipeDetails.appendChild(backButton);
+
   // Populate the inner HTML
   recipeDetails.innerHTML = `
 <h2>${recipeTitle}</h2>
@@ -131,5 +139,7 @@ function displayRecipeDetails(recipe, recipeTitle) {
 <h3>Instructions</h3>
 <p>${recipe.instructions}</p>
 `;
+
+
   recipeContainer.appendChild(recipeDetails);
 }
