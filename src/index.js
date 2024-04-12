@@ -139,7 +139,12 @@ function displayRecipeDetails(recipe, recipeTitle) {
 <h3>Instructions</h3>
 <p>${recipe.instructions}</p>
 `;
-
+ 
+// Add event listener to the back button
+backButton.addEventListener("click", function () {
+  // Clear the recipe details container
+  recipeContainer.innerHTML = "";
+});
 
   recipeContainer.appendChild(recipeDetails);
 }
